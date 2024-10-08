@@ -28,6 +28,7 @@ export const addTrade = async (req: CustomRequest, res: CustomResponse) => {
         await newTrade.save();
         res.status(201).json(newTrade);
     } catch (err) {
+        console.error(err)
         res.status(500).json({ message: 'Server error' });
     }
 };

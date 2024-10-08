@@ -19,7 +19,6 @@ const root = createRoot(document.getElementById('root') as HTMLElement);
 root.render(
     <React.StrictMode>
         <ThemeProvider theme={theme}>
-            <br/>
             <CssBaseline /> {/* Provides a consistent baseline */}
 
                     <Router>

@@ -7,7 +7,7 @@ interface AuthenticatedRequest extends Request {
 }
 
 // Replace with your Cognito User Pool ID and region
-const COGNITO_USER_POOL_ID = process.env.COGNITO_USER_POOL_ID || 'us-east-1_ExaMPle';
+const COGNITO_USER_POOL_ID = process.env.COGNITO_USER_POOL_ID || 'us-east-1_OXn7jTWse';
 const COGNITO_REGION = process.env.COGNITO_REGION || 'us-east-1';
 
 const client = jwksClient({
