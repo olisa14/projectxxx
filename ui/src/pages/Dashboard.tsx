@@ -1,6 +1,6 @@
 // src/pages/Dashboard.tsx
 import React, { useEffect, useState } from 'react';
-import {Typography, Grid, Box, Paper, Button} from '@mui/material';
+import {Typography, Grid2 as Grid, Box, Paper, Button} from '@mui/material';
 import TradeList from '../components/TradeList';
 import InsuranceSection from '../components/InsuranceSection';
 import TradeForm from '../components/TradeForm';
@@ -50,19 +50,19 @@ const Dashboard: React.FC<DashboardProps> = ({currentUser}) => {
             </Typography>
 
 
-            <Grid container spacing={3}>
+            <Grid container spacing={2}>
 
                 {/* TradingView Chat */}
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                     <TradingViewChat />
                 </Grid>
                 {/* Trade Form */}
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                     <TradeForm />
                 </Grid>
 
                 {/* Connect Brokerage Account Section */}
-                <Grid item xs={12}>
+                <Grid size={{xs:12}}>
                     <Paper
                         elevation={3}
                         sx={{
@@ -80,12 +80,12 @@ const Dashboard: React.FC<DashboardProps> = ({currentUser}) => {
                 </Grid>
 
                 {/* Trades Section */}
-                <Grid item xs={12} md={6}>
+                <Grid size={{ xs:12, md:6}}>
                     <TradeList />
                 </Grid>
 
                 {/* Buy Insurance Section */}
-                <Grid item xs={12} md={6}>
+                <Grid size={{xs: 12, md:6}}>
                     <InsuranceSection />
                 </Grid>
 

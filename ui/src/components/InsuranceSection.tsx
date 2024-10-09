@@ -10,7 +10,7 @@ import {
     MenuItem,
     InputLabel,
     FormControl,
-    Grid,
+    Grid2 as Grid,
     Box,
 } from '@mui/material';
 import api from '../services/api';
@@ -34,7 +34,6 @@ const InsuranceSection: React.FC = () => {
         const fetchInsurance = async () => {
             try {
                 const res = await api.get('/insurance', {
-                    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
                 });
                 setInsurance(res.data);
             } catch (err) {
@@ -49,8 +48,7 @@ const InsuranceSection: React.FC = () => {
         try {
             const res = await api.post(
                 '/insurance/buy',
-                { premium, coverageAmount, duration },
-                { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
+                { premium, coverageAmount, duration }
             );
             setInsurance(res.data);
             alert('Insurance purchased successfully');
@@ -69,7 +67,7 @@ const InsuranceSection: React.FC = () => {
                 {insurance ? (
                     <Box>
                         <Grid container spacing={2}>
-                            <Grid item xs={12} sm={6}>
+                            <Grid size={{xs:12, sm:6}}>
                                 <Typography variant="body1">
                                     <strong>Premium:</strong> ${insurance.premium.toFixed(2)}
                                 </Typography>
@@ -77,7 +75,7 @@ const InsuranceSection: React.FC = () => {
                                     <strong>Coverage Amount:</strong> ${insurance.coverageAmount.toFixed(2)}
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12} sm={6}>
+                            <Grid size={{xs:12, sm:6}}>
                                 <Typography variant="body1">
                                     <strong>Valid From:</strong> {new Date(insurance.startDate).toLocaleDateString()}
                                 </Typography>
@@ -85,7 +83,7 @@ const InsuranceSection: React.FC = () => {
                                     <strong>To:</strong> {new Date(insurance.endDate).toLocaleDateString()}
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid size={{xs:12}}>
                                 <Typography variant="body1">
                                     <strong>Status:</strong> {insurance.active ? 'Active' : 'Inactive'}
                                 </Typography>

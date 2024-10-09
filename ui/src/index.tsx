@@ -4,13 +4,9 @@ import {createRoot} from 'react-dom/client';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider, CssBaseline } from '@mui/material';
-import theme from './theme';
+import AppTheme from './theme/AppTheme';
 import { Amplify } from 'aws-amplify';
-// import { Auth } from '@aws-amplify/auth';
 import  {awsmobile,awsConfig} from './aws-exports';
-import {Authenticator} from "@aws-amplify/ui-react";
-// import '@aws-amplify/ui-react/styles.css';
-// import { AuthProvider } from './services/AuthContext';
 
 
 Amplify.configure({ ...awsmobile });
@@ -18,7 +14,8 @@ Amplify.configure({ ...awsmobile });
 const root = createRoot(document.getElementById('root') as HTMLElement);
 root.render(
     <React.StrictMode>
-        <ThemeProvider theme={theme}>
+        {/*<ThemeProvider theme={AppTheme}>*/}
+        <AppTheme>
             <CssBaseline /> {/* Provides a consistent baseline */}
 
                     <Router>
@@ -26,7 +23,8 @@ root.render(
 
                     </Router>
 
-        </ThemeProvider>
+        </AppTheme>
+        {/*</ThemeProvider>*/}
     </React.StrictMode>
 );
 
