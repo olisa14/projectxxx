@@ -18,7 +18,7 @@ const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 // Register User
 const registerUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const { email, password } = req.body;
+    const { email, password, firstName, lastName } = req.body;
     try {
         // Check if user exists
         const existingUser = yield User_1.default.findOne({ email });
@@ -31,6 +31,8 @@ const registerUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         const newUser = new User_1.default({
             email,
             password: hashedPassword,
+            lastName: lastName,
+            firstName: firstName
         });
         yield newUser.save();
         // Create JWT
@@ -38,6 +40,7 @@ const registerUser = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         res.status(201).json({ token });
     }
     catch (err) {
+        console.error(err);
         res.status(500).json({ message: 'Server error' });
     }
 });
@@ -72,6 +75,7 @@ const getUserProfile = (req, res) => __awaiter(void 0, void 0, void 0, function*
         res.json(user);
     }
     catch (err) {
+        console.log(err);
         res.status(500).json({ message: 'Server error' });
     }
 });

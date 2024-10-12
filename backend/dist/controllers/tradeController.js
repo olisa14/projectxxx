@@ -41,6 +41,7 @@ const addTrade = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         res.status(201).json(newTrade);
     }
     catch (err) {
+        console.error(err);
         res.status(500).json({ message: 'Server error' });
     }
 });

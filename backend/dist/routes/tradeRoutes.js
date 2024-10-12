@@ -6,10 +6,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // src/routes/tradeRoutes.ts
 const express_1 = __importDefault(require("express"));
 const tradeController_1 = require("../controllers/tradeController");
-const authenticate_1 = require("../services/authenticate");
+const cognitoAuth_1 = require("../services/cognitoAuth"); // New import
 const router = express_1.default.Router();
 // Get all trades for user
-router.get('/', authenticate_1.authenticate, tradeController_1.getTrades);
+router.get('/', cognitoAuth_1.cognitoAuth, tradeController_1.getTrades);
 // Add a new trade
-router.post('/', authenticate_1.authenticate, tradeController_1.addTrade);
+router.post('/', cognitoAuth_1.cognitoAuth, tradeController_1.addTrade);
 exports.default = router;

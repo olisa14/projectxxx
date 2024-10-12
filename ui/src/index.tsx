@@ -10,7 +10,7 @@ import '@fontsource/roboto/700.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import AppTheme from './theme/AppTheme';
 import { Amplify } from 'aws-amplify';
-import  {awsmobile,awsConfig} from './aws-exports';
+import  {awsmobile} from './aws-exports';
 
 
 Amplify.configure({ ...awsmobile });
@@ -22,7 +22,7 @@ root.render(
         <AppTheme>
             <CssBaseline /> {/* Provides a consistent baseline */}
 
-                    <Router>
+                    <Router future={{ v7_startTransition: true }}>
                         <App/>
 
                     </Router>
