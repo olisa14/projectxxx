@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/projectxxx/static/css/main.c13fc484.css",
-    "main.js": "/projectxxx/static/js/main.749c8a68.js",
+    "main.js": "/projectxxx/static/js/main.727c9a85.js",
     "static/media/ancile_home.png": "/projectxxx/static/media/ancile_home.2d23938b8d075d3a907a.png",
     "static/media/logo.svg": "/projectxxx/static/media/logo.944be4f38f6751b42beccf185a98e6e1.svg",
     "index.html": "/projectxxx/index.html",
     "main.c13fc484.css.map": "/projectxxx/static/css/main.c13fc484.css.map",
-    "main.749c8a68.js.map": "/projectxxx/static/js/main.749c8a68.js.map"
+    "main.727c9a85.js.map": "/projectxxx/static/js/main.727c9a85.js.map"
   },
   "entrypoints": [
     "static/css/main.c13fc484.css",
-    "static/js/main.749c8a68.js"
+    "static/js/main.727c9a85.js"
   ]
 }
