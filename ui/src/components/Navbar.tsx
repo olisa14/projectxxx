@@ -5,7 +5,7 @@ import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import {AuthUser} from "aws-amplify/auth";
 
 interface NavbarProps{
-    onSignOut: any;
+    onSignOut?: any;
     currentUser: AuthUser;
 
 }

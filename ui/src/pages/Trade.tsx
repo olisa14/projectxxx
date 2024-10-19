@@ -13,7 +13,7 @@ interface DashboardProps{
     currentUser: AuthUser;
 }
 
-const Dashboard: React.FC<DashboardProps> = ({currentUser}) => {
+const Trade: React.FC<DashboardProps> = ({currentUser}) => {
     const [user, setUser] = useState<AuthUser>(currentUser);
 
     useEffect(() => {
@@ -46,21 +46,24 @@ const Dashboard: React.FC<DashboardProps> = ({currentUser}) => {
     return (
         <Box mt={4}>
             <Typography variant="h4" gutterBottom>
-                Dashboard
+                Trade
             </Typography>
 
 
             <Grid container spacing={2}>
 
                 {/* TradingView Chat */}
-                <Grid size={{xs:12}}>
+                <Grid size={{xs:12, lg:9, md:12}}>
                     <TradingViewChat />
                 </Grid>
                 {/* Trade Form */}
-                <Grid size={{xs:12}}>
+                <Grid size={{lg:3, md:12, xs:12}}>
                     <TradeForm />
                 </Grid>
-
+                {/* Buy Insurance Section */}
+                <Grid size={{xs:12, md:4}}>
+                    <InsuranceSection />
+                </Grid>
                 {/* Connect Brokerage Account Section */}
                 <Grid size={{xs:12}}>
                     <Paper
@@ -79,15 +82,12 @@ const Dashboard: React.FC<DashboardProps> = ({currentUser}) => {
                     </Paper>
                 </Grid>
 
-                {/* Trades Section */}
-                <Grid size={{ xs:12, md:6}}>
-                    <TradeList />
-                </Grid>
+                {/*/!* Trades Section *!/*/}
+                {/*<Grid size={{ xs:12, md:6}}>*/}
+                {/*    <TradeList />*/}
+                {/*</Grid>*/}
 
-                {/* Buy Insurance Section */}
-                <Grid size={{xs: 12, md:6}}>
-                    <InsuranceSection />
-                </Grid>
+
 
 
 
@@ -97,4 +97,4 @@ const Dashboard: React.FC<DashboardProps> = ({currentUser}) => {
     );
 };
 
-export default Dashboard;
+export default Trade;

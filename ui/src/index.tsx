@@ -3,14 +3,12 @@ import React from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import CssBaseline from '@mui/material/CssBaseline';
+// import CssBaseline from '@mui/material/CssBaseline';
 import AppTheme from './theme/AppTheme';
 import { Amplify } from 'aws-amplify';
 import  {awsmobile} from './aws-exports';
+import './index.css';
+
 
 
 Amplify.configure({ ...awsmobile });
@@ -20,11 +18,10 @@ root.render(
     <React.StrictMode>
         {/*<ThemeProvider theme={AppTheme}>*/}
         <AppTheme>
-            <CssBaseline /> {/* Provides a consistent baseline */}
+            {/*<CssBaseline /> /!* Provides a consistent baseline *!/*/}
 
-                    <Router future={{ v7_startTransition: true }}>
+                    <Router future={{ v7_startTransition: true }} basename='/projectxxx'>
                         <App/>
-
                     </Router>
 
         </AppTheme>
