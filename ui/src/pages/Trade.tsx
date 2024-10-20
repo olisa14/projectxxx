@@ -44,7 +44,7 @@ const Trade: React.FC<DashboardProps> = ({currentUser}) => {
     // }, []);
 
     return (
-        <Box mt={4}>
+        <Box sx={{ width: '100%', maxWidth: { sm: '100%', md: '1700px' } }}>
             <Typography variant="h4" gutterBottom>
                 Trade
             </Typography>
@@ -57,30 +57,30 @@ const Trade: React.FC<DashboardProps> = ({currentUser}) => {
                     <TradingViewChat />
                 </Grid>
                 {/* Trade Form */}
-                <Grid size={{lg:3, md:12, xs:12}}>
+                <Grid size={{ xs:12, lg:3, md:12}}>
                     <TradeForm />
                 </Grid>
                 {/* Buy Insurance Section */}
-                <Grid size={{xs:12, md:4}}>
-                    <InsuranceSection />
-                </Grid>
+                {/*<Grid size={{xs:12, md:4}}>*/}
+                {/*    <InsuranceSection />*/}
+                {/*</Grid>*/}
                 {/* Connect Brokerage Account Section */}
-                <Grid size={{xs:12}}>
-                    <Paper
-                        elevation={3}
-                        sx={{
-                            padding: 2,
-                        }}
-                    >
-                        <Typography variant="h6">Connect Brokerage Account</Typography>
-                        {/* Implement brokerage connection components here */}
-                        {/* Placeholder content */}
-                        <br/>
-                        <Button variant="contained" color="primary" >
-                            Connect Brokerage
-                        </Button>
-                    </Paper>
-                </Grid>
+                {/*<Grid size={{xs:12}}>*/}
+                {/*    <Paper*/}
+                {/*        elevation={3}*/}
+                {/*        sx={{*/}
+                {/*            padding: 2,*/}
+                {/*        }}*/}
+                {/*    >*/}
+                {/*        <Typography variant="h6">Connect Brokerage Account</Typography>*/}
+                {/*        /!* Implement brokerage connection components here *!/*/}
+                {/*        /!* Placeholder content *!/*/}
+                {/*        <br/>*/}
+                {/*        <Button variant="contained" color="primary" >*/}
+                {/*            Connect Brokerage*/}
+                {/*        </Button>*/}
+                {/*    </Paper>*/}
+                {/*</Grid>*/}
 
                 {/*/!* Trades Section *!/*/}
                 {/*<Grid size={{ xs:12, md:6}}>*/}

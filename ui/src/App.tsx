@@ -23,6 +23,7 @@ import {
     datePickersCustomizations,
     treeViewCustomizations,
 } from './theme/customizations';
+import Reimbursements from "./assets/Reimbursements";
 
 const xThemeComponents = {
     ...chartsCustomizations,
@@ -76,6 +77,7 @@ const App: React.FC = (props: { disableCustomTheme?: boolean }) => {
                                         <Route index element={<Home/>}/>
                                         <Route path="/home" element={<Home/>}/>
                                         <Route path="/transactions" element={<Transactions/>}/>
+                                        <Route path="/reimbursements" element={<Reimbursements/>}/>
                                         <Route path="/trade" element={ <Trade currentUser={user as AuthUser}/>} />
                                         {/* Add a callback route if using Hosted UI */}
                                         <Route path="/callback" element={<div>Loading...</div>}/>

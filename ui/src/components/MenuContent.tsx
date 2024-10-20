@@ -20,6 +20,7 @@ import {useEffect, useState} from "react";
 const mainListItems = [
   { text: 'Home', path:'/home', icon: <HomeRoundedIcon /> },
   { text: 'Trade', path:'/trade', icon: <CandlestickChartIcon /> },
+  { text: 'Reimbursements', path:'/reimbursements', icon: <CandlestickChartIcon /> },
   { text: 'Transaction', path:'/transactions', icon: <AnalyticsRoundedIcon /> },
   { text: 'Account', path:'/account', icon: <PeopleRoundedIcon /> },
 ];

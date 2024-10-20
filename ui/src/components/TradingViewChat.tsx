@@ -8,9 +8,9 @@ const TradingViewChat: React.FC = () => {
         <Card elevation={3} >
         {/*<Card elevation={3} sx={{ padding: 2, height: '500px' }}>*/}
             <CardContent>
-                <Typography variant="h6" gutterBottom>
-                    TradingView Chat
-                </Typography>
+                {/*<Typography variant="h6" gutterBottom>*/}
+                {/*    TradingView Chat*/}
+                {/*</Typography>*/}
                 {/* Embed TradingView chat widget here */}
                 <TradingViewWidget />
             </CardContent>
